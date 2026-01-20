@@ -34,7 +34,7 @@ topsis topsis_dataset.csv "0.2,0.15,0.15,0.2,0.15,0.15" "-,+,+,+,+,+" result.csv
 
 ---
 
-## 🧮 Steps Followed in TOPSIS
+##  Steps Followed in TOPSIS
 
 1. **Normalization**  
    Transform the data into a comparable scale.
@@ -56,7 +56,7 @@ topsis topsis_dataset.csv "0.2,0.15,0.15,0.2,0.15,0.15" "-,+,+,+,+,+" result.csv
 
 ---
 
-## 📊 Sample Dataset
+##  Sample Dataset
 
 | Alternative | Cost | Quality | Delivery Time | Durability | Service | Energy Efficiency |
 |------------|------|---------|---------------|------------|---------|-------------------|
@@ -69,29 +69,34 @@ topsis topsis_dataset.csv "0.2,0.15,0.15,0.2,0.15,0.15" "-,+,+,+,+,+" result.csv
 
 ---
 
-## 🖥️ Output (Printed in Terminal)
+##  Output (Printed in Terminal)
 
 ```text
 --- TOPSIS RESULTS (Score & Rank) ---
    Topsis Score    Rank
-       0.534277      3
-       0.308368      5
-       0.691632      1
-       0.534737      2
-       0.401046      4
-       0.582190      3
+       0.430121     5
+       0.651113     1
+       0.359169     6
+       0.517720     3
+       0.447729     4
+       0.537590     2
 -------------------------------------
+Results saved to result.csv
 ```
 
 ---
 
-## 📚 Description
+##  Description
 
 This package helps users evaluate and rank alternatives based on multiple criteria by applying the TOPSIS methodology.  
 It is suitable for academic assignments, research work, and real-world decision-making problems.
+Before procedding make sure of certian points:
+1.Correct number of parameters (inputFileName, Weights, Impacts, resultFileName).
+2.The input file must contain three or more columns.
+3.From 2nd to last columns must contain numeric values.
+4.The number of weights, number of impacts and number of columns (from 2nd to last columns) must be the same.
 
 ---
 
-## 📝 License
-
-This project is intended for academic and educational use.
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
