@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOPSIS Web Service</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 400px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 500;
+        }
+        input[type="text"], input[type="email"], input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box; /* Ensures padding doesn't widen element */
+        }
+        button {
+            width: 100%;
+            background-color: #f0ad4e;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background-color: #ec971f;
+        }
+        .message {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 14px;
+        }
+        .success { background-color: #d4edda; color: #155724; }
+        .error { background-color: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>TOPSIS Web Service</h2>
+    
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="file">Input File (CSV)</label>
+            <input type="file" name="file" id="file" required accept=".csv">
+        </div>
+
+        <div class="form-group">
+            <label for="weights">Weights (comma separated)</label>
+            <input type="text" name="weights" id="weights" placeholder="e.g., 1,1,1,1" required>
+        </div>
+
+        <div class="form-group">
+            <label for="impacts">Impacts (+ or -)</label>
+            <input type="text" name="impacts" id="impacts" placeholder="e.g., +,+,-,+" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Id</label>
+            <input type="email" name="email" id="email" placeholder="name@example.com" required>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if message %}
+    <div class="message" style="background-color: #e2e3e5; color: #383d41;">
+        {{ message }}
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>
